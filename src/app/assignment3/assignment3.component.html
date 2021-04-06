@@ -1,0 +1,20 @@
+<div class="flexBox">
+    <div class="col-lg-6">
+        <div class="input-group">
+        <span class="input-group-btn">
+            <button (click)="submit()" class="btn btn-info" type="button">Submit</button>
+        </span>
+        <input [(ngModel)]="textInBox" (keyup.enter)="submit()" type="text" class="form-control" placeholder="Enter secret...">
+    </div>
+        <div class="displayDetailsDiv">
+            <p (click)="displayDetails()" class="displayDetails">Display Details</p>
+        </div>
+        <div *ngIf="displaySecretList === true">
+            <p *ngFor="let item of secretList; index as i;" 
+            [ngStyle]="{'background-color': i>5 ? '#b5b5ff' : ''}"
+            [ngClass]="{whiteText: i>5}"> {{ i + ". " + item }}</p>
+        </div>
+    </div>
+
+
+</div>

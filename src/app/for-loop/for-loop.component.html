@@ -1,0 +1,11 @@
+<div class="flexBox">
+
+    <!-- Long-hand ngFor -->
+    <ng-template ngFor let-item [ngForOf]="list" let-i="index">
+        <li>{{ list[i] }}</li>
+    </ng-template>
+
+    <!-- Short-hand ngFor -->
+    <li *ngFor="let item of list;">{{ item }}</li>
+
+</div>

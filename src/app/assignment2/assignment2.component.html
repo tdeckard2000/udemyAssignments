@@ -1,0 +1,18 @@
+<div>
+    <button (click)="onReset()" [disabled]="buttonDisabled" class="btn btn-outline-secondary" type="button" id="button-addon1">Reset</button>
+    <input [(ngModel)]="username" (keyup)="onKeyUp()" type="text" class="form-control" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
+    
+    <p *ngIf="username.length === 0; else showUsername">_______</p>
+    <ng-template #showUsername>
+        <p>{{ username }}</p>
+    </ng-template>
+    
+    <p *ngIf="username.length > 0; else showFalse">String is not empty.</p>
+    <ng-template #showFalse>
+        <p>String is empty.</p>
+    </ng-template>
+    <p [ngClass]="{online: serverStatus === 'online', offline: serverStatus === 'offline'}" [ngStyle]="{'background-color': serverStatus === 'online' ? '#61fb8d' : '#ff4b4b'}">
+        Server is {{ serverStatus }}
+    </p>
+
+</div>
