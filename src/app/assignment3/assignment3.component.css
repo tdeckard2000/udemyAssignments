@@ -1,0 +1,31 @@
+.displayDetails{
+    color: #777;
+    font-size: 1.15rem;
+    width: fit-content;
+}
+
+.displayDetails:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.displayDetails::selection{
+    background-color: transparent;
+}
+
+.displayDetailsDiv{
+    display: flex;
+    justify-content: flex-end;
+    padding: 0 5px;
+}
+
+.flexBox{
+    display: flex;
+    flex-direction: column;
+    padding: 150px;
+    text-align: center;
+}
+
+.whiteText{
+    color: white;
+}
